@@ -421,8 +421,8 @@ class Book {
 
 		url = new Url(input);
 		path = url.path();
-		extension = path.extension;
-
+		extension = path.extension.split("?")[0];
+		
 		if (!extension) {
 			return INPUT_TYPE.DIRECTORY;
 		}
